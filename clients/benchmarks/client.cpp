@@ -287,7 +287,7 @@ try
     std::string filter;
     std::string activation_type;
     int         scaleAFormat;
-    int         scaleBFormat;    
+    int         scaleBFormat;
     int         device_id;
     int         flags             = 0;
     bool        datafile          = hipblaslt_parse_data(argc, argv);
@@ -824,7 +824,7 @@ try
     arg.bias_source = string_to_hipblaslt_bias_source(bias_source);
 
     auto scaleInt2Enum = [](int s) {
-        if(s == 0)    
+        if(s == 0)
             return hipblaslt_scaling_format::none;
         if(s == 1)
             return hipblaslt_scaling_format::Scalar;
